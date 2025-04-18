@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Joshitha</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .jumbotron {
+            background-color: #0073e6;
+            color: white;
+            padding: 60px 30px;
+            text-align: center;
+        }
+
+        .jumbotron h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .jumbotron p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #ff9900;
+            color: #000;
+            padding: 15px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e68a00;
+        }
+
+        .content {
+            padding: 40px;
+            text-align: center;
+        }
+        @keyframes slideFade {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.jumbotron h1,
+.jumbotron p,
+.jumbotron a {
+    animation: slideFade 1s ease forwards;
+    opacity: 0;
+}
+
+.jumbotron h1 {
+    animation-delay: 0.2s;
+}
+
+.jumbotron p {
+    animation-delay: 0.4s;
+}
+
+.jumbotron a {
+    animation-delay: 0.6s;
+}
+body {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <div class="jumbotron">
+        <h1>Welcome!!</h1>
+        <p>You have successfully logged in.</p>
+        <a href="demo_005.html" class="btn">Log out</a>
+    </div>
+
+    <div class="content">
+        <p>Explore our platform. We're glad you're here!</p>
+        <!-- Add more content or cards here like Amazon's landing page -->
+    </div>
+<a href="demo_007.html" class="btn">Go to Details Page</a>
+
+</body>
+
+</html>

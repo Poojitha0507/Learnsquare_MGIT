@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>User Details - Joshitha</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: url('https://lp-cms-production.imgix.net/2019-06/da354ab06b154249510183e96c612d7a134c3283a29b5a966dcc48e62d5edd87.jpg?fit=crop&q=40&sharp=10&vib=20&auto=format&ixlib=react-8.6.4') no-repeat center center fixed; /* Background Image */
+            background-size: cover; /* Ensures the background covers the whole page */
+            margin: 0;
+            padding: 0;
+            animation: fadeIn 1s ease-in;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 60px auto;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            animation: slideFade 1s ease forwards;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0073e6;
+            margin-bottom: 20px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        form input, form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 14px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #218838;
+            box-shadow: 0 0 10px #28a745;
+            transform: scale(1.02);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .logout-btn {
+            background-color: #dc3545;
+            color: white;
+            padding: 14px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .logout-btn:hover {
+            background-color: #c82333;
+            box-shadow: 0 0 10px #dc3545;
+            transform: scale(1.02);
+            transition: all 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideFade {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>User Details</h2>
+        <form>
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="bio">Short Bio</label>
+            <textarea id="bio" name="bio" rows="4" placeholder="Tell us a little about yourself..."></textarea>
+
+            <button type="submit">Save Details</button>
+
+            <!-- Log Out Button -->
+            <button type="button" class="logout-btn" onclick="logout()">Log Out</button>
+        </form>
+    </div>
+
+    <script>
+        // Log out function
+        function logout() {
+            // You can clear localStorage or perform a session destroy action here
+            alert('You have successfully logged out!');
+            window.location.href = "demo_005.html";  // Redirect to login page
+        }
+    </script>
+</body>
+
+</html>
