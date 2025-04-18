@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>poojitha.com</title>
+  <!-- Simple Favicon using online link -->
+  <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/052/248/075/small_2x/peacock-feather-wallpaper-hd-wallpaper-photo.jpeg" type="image/jpeg" />
+
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .box {
+      background-color: white;
+      padding: 20px;
+      width: 300px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px 5px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .submit {
+      background-color: green;
+      color: white;
+    }
+
+    .cancel {
+      background-color: red;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Login Page</h2>
+
+    <input type="text" id="userid" placeholder="Enter your ID"><br>
+    <input type="password" id="password" placeholder="Enter your password"><br>
+
+    <button class="submit" onclick="login()">Submit</button>
+    <button class="cancel" onclick="clearForm()">Cancel</button>
+  </div>
+
+  <script>
+    function login() {
+      var id = document.getElementById("userid").value;
+      var pass = document.getElementById("password").value;
+
+      if (id === "" || pass === "") {
+        alert("Please fill in both fields.");
+      } else {
+        alert("Login successful! Welcome " + id);
+      }
+    }
+
+    function clearForm() {
+      document.getElementById("userid").value = "";
+      document.getElementById("password").value = "";
+    }
+  </script>
+
+</body>
+</html>
